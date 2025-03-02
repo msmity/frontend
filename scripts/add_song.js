@@ -11,7 +11,8 @@ async function addSong(){
         releaseDate: document.querySelector("#released").value,
         popularity: document.querySelector("#popularity").value,
         genre: document.querySelector("#genre").value ? 
-        document.querySelector("#genre").value.split(",") : []
+        document.querySelector("#genre").value.split(",") : [],
+        username : localStorage.getItem("uname")
     }
 
     const response = await fetch("http://localhost:3000/api/songs", {
